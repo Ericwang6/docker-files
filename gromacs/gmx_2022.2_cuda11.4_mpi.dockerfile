@@ -12,7 +12,6 @@ RUN cd /tmp \
     && ./configure --prefix=/usr && make -j && make install \
     && rm -rf /tmp/
 # install gromacs
-RUN apt-get install -y python3
 ARG GROMACS_VERSION=2022.2
 RUN cd /tmp \
     && git clone https://gitlab.com/gromacs/gromacs.git && cd gromacs && git checkout v${GROMACS_VERSION} \
